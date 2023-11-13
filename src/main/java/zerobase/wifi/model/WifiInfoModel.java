@@ -17,9 +17,9 @@ public class WifiInfoModel {
     여기에 게터, 세터 다 넣기
      */
     // pubdao 넣기
-    String url = "jdbc:mariadb://localhost:3306/mission1";
-    String id = "user1";
-    String pw = "user1234";
+    String url = "jdbc:mariadb://localhost:3306";
+    String id = "root";
+    String pw = "root";
     public void insert(WifiInfoDto wifiInfoDto){
         try{
             Class.forName("org.mariadb.jdbc.Driver");

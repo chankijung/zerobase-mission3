@@ -17,9 +17,9 @@ public class DataBaseConnection extends DBConnection {
      */
     public static void test() {
 
-        String url = "jdbc:mariadb://localhost:3306/mission1";
-        String id = "user1";
-        String pw = "user1234";
+        String url = "jdbc:mariadb://localhost:3306/";
+        String id = "root";
+        String pw = "root";
         Connection conn = null;
         PreparedStatement stat = null;
 

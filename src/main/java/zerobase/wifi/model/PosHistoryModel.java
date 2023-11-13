@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PosHistoryModel {
-    String url = "jdbc:mariadb://localhost:3306/mission1";
-    String id = "user1";
-    String pw = "user1234";
+    String url = "jdbc:mariadb://localhost:3306/";
+    String id = "root";
+    String pw = "root";
 
     public void insert(PosHistoryDto posHistoryDto){
         try{
@@ -24,7 +24,7 @@ public class PosHistoryModel {
 
         try{
             conn= DriverManager.getConnection(url, id, pw);
-            String sql = "INSERT INTO HISTORY(LNT, LAT, DATE) VALUES (?,?, datetime('now','localtime'))";
+            String sql = "INSERT INTO HISTORY(LNT, LAT, DATE) VALUES (?,?, NOW())";
             stat= conn.prepareStatement(sql);
             stat.setString(1,String.valueOf(posHistoryDto.getLongitude()));
             stat.setString(2,String.valueOf(posHistoryDto.getLatitude()));
